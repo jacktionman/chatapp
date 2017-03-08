@@ -1,0 +1,5 @@
+<ul>
+   <li *ngFor="let item of aItem | async"
+   (mousedown)="coordinates($event,item.$key, item.text, item.msg)">
+   </li>
+ </ul>

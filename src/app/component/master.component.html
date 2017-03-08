@@ -1,0 +1,22 @@
+<div class="master">
+<ul>
+   <li *ngFor="let item of currentItem | async" [@flyInOut]="orientation"  >
+     <div [ngClass]="{'swap' : item.sender == 'B'}" id="emojiholderM">{{imageChange(item.text, "emojiholderM", item.sender)}} </div>
+   </li>
+ </ul>
+
+
+
+ <ul>
+    <li *ngFor="let item of aItem | async">
+      <div id="emojiholderA">{{imageChangeSM(item.text, "emojiholderA")}} </div>
+    </li>
+  </ul>
+
+
+  <ul>
+     <li *ngFor="let item of bItem | async">
+       <div id="emojiholderB">{{imageChangeSM(item.text, "emojiholderB")}} </div>
+     </li>
+   </ul>
+ </div>
